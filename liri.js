@@ -45,7 +45,21 @@ switch (action){
           });
         break;
     case "movie-this": 
-        console.log("movie-this called");
+        console.log("movie-this searching for " + term);
+        var URL = `http://www.omdbapi.com/?t=${term}&y=&plot=short&apikey=trilogy`;
+        axios.get(URL).then(
+            function(response) {
+                console.log(
+                    "Title: " + response.data.Title + 
+                    "\nReleased: " + response.data.Released + 
+                    "\nIMDB Rating: " + response.data.imdbRating + 
+                    "\nRotten Tomatoes: " + response.data.Ratings[1].Value +
+                    "\nCountry: " + response.data.Country +
+                    "\nLanguage: " + response.data.Language + 
+                    "\nPlot: " + response.data.Plot + 
+                    "\nActors: " + response.data.Actors);
+  }
+);
         break;
     case "do-what-it-says called":
         console.log("Doing what it says");
