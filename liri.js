@@ -40,7 +40,8 @@ switch (action){
           console.log(
                 "Artist(s): " + data.tracks.items[0].artists[0].name +
                 "\nTitle: " + data.tracks.items[0].name +
-                "\nLink: " + data.tracks.items[0].preview_url + "\n");
+                "\nLink: " + data.tracks.items[0].preview_url + 
+                "\nAlbum: " + data.tracks.items[0].album.name);
           });
         break;
     case "movie-this": 
