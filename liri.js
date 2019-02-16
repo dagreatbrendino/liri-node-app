@@ -4,6 +4,7 @@ var keys = require("./keys.js");
 
 require("node-spotify-api");
 var axios = require("axios");
+var moment = require("moment");
 // var spotify = new Spotify(keys.spotify);
 
 var args = process.argv; 
@@ -21,8 +22,10 @@ switch (action){
             function(response){
                 // console.log(response.data);
                 response.data.forEach(function(concert){
+                    //from moment docs
+                    var date = moment(concert.datetime, moment.ISO_8601).format("MM/DD/YYYY");
                     console.log("Venue: " + concert.venue.name + " Location: " + concert.venue.city + ", " + concert.venue.region +
-                    +" Date: " + concert.datetime);
+                    " Date: " + date);
                     console.log("-------------------------");
                 });
         });
