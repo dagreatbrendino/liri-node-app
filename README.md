@@ -1,5 +1,4 @@
 # liri-node-app
-# liri-node-app
 ### Overview
 This app allows users to provide command line inputs to execute serveral different api calls. Think of it as Siri with a much finer scope, and instead of voice input you provide command line inputs to get the information you are looking for. Watch this [Demo](https://www.youtube.com/watch?v=lXW1te_tjRg&feature=youtu.be) if you have trouble getting started!
 
